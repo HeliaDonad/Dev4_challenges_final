@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Bell+MT&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bellefair&family=Karla:ital,wght@0,200..800;1,200..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+  font-family: 'Bell MT','Bellefair', Arial, sans-serif; 
+  background-color: #FEFEFE;
+}
+
+#logo {
+  font-size: 1.8em;
+  cursor: pointer;
+  text-decoration: none;
+  color: #FEFEFE;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #333;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; 
+}
+
+/* Hamburger */
+.burger {
+  font-size: 1.8em;
+  cursor: pointer;
+  display: inline-block;
+  color: #FEFEFE;
+  transition: opacity 0.3s;
+}
+
+/* Kruis */
+.close {
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+  display: none; 
+  color: #FEFEFE;
+  transition: opacity 0.3s;
+  margin-top: -5px;
+}
+
+#burger:checked ~ .burger {
+  opacity: 0; /* Verberg hamburger */
+}
+
+#burger:checked ~ .close {
+  display: inline-block; /* Toon kruis */
+}
+
+#burger:not(:checked) ~ .burger {
+  display: inline-block; /* Toon hamburger */
+}
+
+#burger:not(:checked) ~ .close {
+  opacity: 0; /* Verberg kruis */
+}
+
+/* Overgangseffecten */
+.burger,
+.close {
+  transition: opacity 0.3s;
+}
+
+#burger {
+  display: none;
+}
+
+#burger:checked ~ .subnav {
+  display: flex;
+  left: 0;
+}
+
+.subnav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #FEFEFE;
+  width: 100%;
+  left: -100%;
+  transition: all 0.2s ease-in;
+  margin-top: 122px;
+  z-index: 1;
+}
+
+.subnav a {
+  display: inline-block;
+  padding: 1em;
+  text-decoration: none;
+  color: #545454;
+  font-size: 18px;
+  font-weight: 500;
+  border-top: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+@media only screen and (min-width: 700px) {
+  .burger {
+    display: none;
+  }
+
+  .subnav {
+    position: static;
+    flex-direction: row;
+    width: auto;
+    left: auto;
+    margin-top: 0px;
+    transition: none;
+  }
+
+  .subnav a {
+    border: none;
+    display: flex;
+    padding: 0px 20px;
+    background-color: #333;
+    color: #FEFEFE;
+    font-weight: 800;
+  }
+}

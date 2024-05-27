@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Would You Rather Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin: 0 auto; 
+            display: block; 
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #4571cf;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease; 
+            border-radius: 20px;
+        }
+
+        button:hover {
+            background-color: #1644a7;
+        }
+
+        .cat-and-dog-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .cat-and-dog-images img {
+            width: 150px;
+            height: 150px;
+            margin: 0 10px;
+            border-radius: 50%; 
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Are you a black cat or a golden retriever?</h1>
+        <p>You can click on the choices, but if you're on mobile, you can also move left and right.</p>
+        <div class="cat-and-dog-images">
+            <img src="images/black_cat.jpg" alt="Black Cat">
+            <img src="images/golden_retriever.jpg" alt="Golden Retriever">
+        </div>
+        <button onclick="startGame()">Start</button>
+    </div>
+    <script>
+        function startGame() {
+            window.location.href = "game.html";
+        }
+    </script>
+</body>
+</html>

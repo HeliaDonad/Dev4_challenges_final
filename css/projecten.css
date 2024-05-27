@@ -1,0 +1,57 @@
+.grid {
+    display: grid;
+    grid-template-columns: auto;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 120px;
+  }
+  
+  .box {
+    position: relative;
+    background-color: #FEFEFE;
+    border-radius: 15px;
+    border: 2px solid #4571cf;
+    margin-bottom: 60px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+  }
+
+  .content .html {
+    font-size: 24px;
+    color: black;
+    z-index: 1;
+  }
+
+.content a.html,
+.content a.pdf {
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none; 
+  display: inline-block; 
+}
+
+.image {
+    position: relative;
+    max-width: 100px;
+    margin: 0 auto;
+    margin-top: -60px;
+  }
+
+  .box .content a:hover {
+    color: #1644a7;
+  }
+
+  @media only screen and (max-width: 430px){
+    .grid{
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+}
+

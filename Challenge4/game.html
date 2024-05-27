@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Would You Rather Game</title>
+    <link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="questionContainer">
+        <h1 id="question"></h1>
+        <div id="choices">
+            <img id="leftChoice" onclick="chooseLeft()" src="" alt="Left">
+            <img id="rightChoice" onclick="chooseRight()" src="" alt="Right">
+        </div>
+        <button id="continueButton" onclick="nextQuestion()" style="display: none;">Ga Verder</button>
+        <p id="answer" style="display: none;"></p>
+    </div>
+
+    <div id="resultContainer" style="display: none;">
+        <h1>You are a</h1>
+        <p id="result"></p>
+    </div>
+
+    <script src="sketch.js"></script>
+</body>
+</html>

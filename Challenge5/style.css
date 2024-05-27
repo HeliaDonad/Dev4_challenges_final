@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.background-container {
+  width: 148%; /* Past de breedte van de container aan om de hele afbeelding zichtbaar te maken */
+  height: 100vh;
+  background-image: url('images/SevenWonders.jpeg');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left center;
+}
+
+.scrollable-background {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+}
+
+.content-container {
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 0 auto;
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #4571cf;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
+}
+
+button:hover {
+  background-color: #1644a7;
+}
